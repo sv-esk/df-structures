@@ -1703,20 +1703,25 @@
         <int32_t name='unk_v4019_1' comment='v0.40.17-19'/>
         <int32_t name='unk_v4019_2' comment='v0.40.17-19'/>
 
-        <stl-vector name="unk_v4201_1a" comment='v0.42.01'>
+        <stl-vector name="needs" comment='v0.42.01'>
             <pointer>
-                <int32_t name="unk_0"/>
-                <int32_t name="unk_4" init-value='-1'/>
-                <int32_t name="unk_8"/>
-                <int32_t name="unk_c"/>
+                <enum base-type='int32_t' name="id" type-name='need_type'/>
+                <int32_t name="deity_id" init-value='-1'/>
+                <int32_t name="distraction_level"/>
+                <int32_t name="need_level"/>
             </pointer>
         </stl-vector>
-        <int32_t name="unk_v4201_1" comment='v0.42.01'/>
-        <int32_t name="unk_v4201_2" comment='v0.42.01'/>
+        <bitfield name='flags' base-type='uint32_t' comment='v0.42.01'>
+            <flag-bit/>
+            <flag-bit name='has_unmet_needs'/>
+        </bitfield>
+        <pointer name='temporary_trait_changes' comment='v0.42.01'>
+            <static-array type-name='int16_t' name='traits' count='50' index-enum='personality_facet_type'/>
+        </pointer>
         <int32_t name="unk_v4201_3" init-value='-1' comment='v0.42.01'/>
         <int32_t name="unk_v4201_4" init-value='-1' comment='v0.42.01'/>
-        <int32_t name="unk_v4201_5" comment='v0.42.01; uninitialized'/>
-        <int32_t name="unk_v4201_6" comment='v0.42.01; uninitialized'/>
+        <int32_t name="current_focus" comment='v0.42.01'/>
+        <int32_t name="average_focus" comment='v0.42.01'/>
     </struct-type>
 
     <enum-type type-name='unit_action_type'>
