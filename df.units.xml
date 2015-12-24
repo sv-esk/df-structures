@@ -1722,7 +1722,7 @@
                 [+300   -    +400] bright green "Unfettered"   - 6 points
                 goes to +400 when unit satisfies its need
                 if at least one need is Unfocused, Distracted or Distracted! second flag in the unk_v4201_1 will be up
-                <int32_t name="need level"/>
+                <int32_t name="need_level"/>
                     if distraction_level is 0 or below - distraction_level decreases by this value
                     every 70 dot clicks in fort mode and every 145 dot clicks in adv mode
                     you can see text when you creating new adventurer:
