@@ -1707,58 +1707,21 @@
             <pointer>
                 <enum base-type='int32_t' name="id" type-name='need_type'/>
                 <int32_t name="deity_id" init-value='-1'/>
-                deity historical figure id for pray need
-                -1 for meditate and any other need
                 <int32_t name="distraction_level"/>
-                distraction levels(adventurer z menu and fort dwarf thoughts and preferences screen):
-                -200000 seems to be limit
-                interval - text - points (for focus calculation):
-                [-200000   - -100000] red "Distracted!"        - 2 points
-                [-99999 -  -10000] yellow "Distracted"         - 2.66(6) points
-                [-9999  -   -1000] brown "Unfocused"           - 3.33(3) points
-                [-999   -     +99] grey "Undistracted"         - 4 points
-                [+100   -    +199] white "Untroubled"          - 4.66(6) points
-                [+200   -    +299] green "Level-headed"        - 5.33(3) points
-                [+300   -    +400] bright green "Unfettered"   - 6 points
-                goes to +400 when unit satisfies its need
-                if at least one need is Unfocused, Distracted or Distracted! second flag in the unk_v4201_1 will be up
                 <int32_t name="need_level"/>
-                    if distraction_level is 0 or below - distraction_level decreases by this value
-                    every 70 dot clicks in fort mode and every 145 dot clicks in adv mode
-                    you can see text when you creating new adventurer:
-                    1  Slight Need
-                    2  Moderate Need
-                    5  Strong Need
-                    10 Intense Need
-                    if distraction_level greater then 0 - distraction_level decreases by 1
             </pointer>
         </stl-vector>
-        <bitfield name='distraction_flags' base-type='uint32_t' comment='v0.42.01'>
-            <flag-bit/>.
-            <flag-bit name='unfocused'/>distraction_level on at least one need is -1000 or below
+        <bitfield name='flags' base-type='uint32_t' comment='v0.42.01'>
+            <flag-bit/>
+            <flag-bit name='has_unmet_needs'/>
         </bitfield>
         <pointer name='temporary_trait_changes' comment='v0.42.01'>
-            "he is currently more rude" and so text in the dwarf thoughts and preferences screens
             <static-array type-name='int16_t' name='traits' count='50' index-enum='personality_facet_type'/>
         </pointer>
         <int32_t name="unk_v4201_3" init-value='-1' comment='v0.42.01'/>
         <int32_t name="unk_v4201_4" init-value='-1' comment='v0.42.01'/>
         <int32_t name="current_focus" comment='v0.42.01'/>
         <int32_t name="average_focus" comment='v0.42.01'/>
-        average focus is number of needs multiplied by 4
-        current focus is calculated - 2 points for every "badly distracted" need
-        2.66(6) for every "distracted", 3.33(3) for every "unfocused" etc.
-        final value is being truncated to int
-        if all needs are "Undistracted" - current_focus and average_focus will be set to 1
-        final focus level = current_focus/average_focus
-        interval - adv text - fort thoughts and preferences text(Overall, [name] is [text] by unmet/satisfied needs)
-        [0.00 - 0.61) red "Distracted!"        red "badly distracted"
-        [0.61 - 0.81) yellow "Distracted"      yellow "distracted"
-        [0.81 - 0.99] no text                  brown "unfocused"
-        = 1.00        no text                  grey "untroubled"
-        [1.01 - 1.20) no text                  white "somewhat focused"
-        [1.20 - 1.39) green "Focused"          green "quite focused"
-        [1.40 - +inf) bright green "Focused!"  bright green "very focused"
     </struct-type>
 
     <enum-type type-name='unit_action_type'>
