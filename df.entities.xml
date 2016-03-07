@@ -55,7 +55,6 @@
         <stl-vector name='features' pointer-type='entity_occasion_schedule_feature' />
         <int32_t />
         <int32_t />
-        <int32_t />
     </struct-type>
     <enum-type type-name='occasion_schedule_feature' base-type='int32_t'>
         <enum-item />
