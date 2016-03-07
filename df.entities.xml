@@ -27,10 +27,6 @@
         <int32_t />
         <stl-vector name='schedule' pointer-type='entity_occasion_schedule' />
         <int32_t />
-        <int32_t />
-        <int32_t />
-        <int32_t />
-        <int32_t />
     </struct-type>
     <enum-type type-name='occasion_schedule_type' base-type='int32_t'>
         <enum-item name='DANCE_PERFORMANCE'/>
