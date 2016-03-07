@@ -139,7 +139,9 @@
             <stl-vector name="unk_v4201_2" comment='v0.42.01'/>
             <stl-vector name="unk_v4201_3" comment='v0.42.01'/>
             <int32_t name="unk_v4201_4" comment='v0.42.01'/>
-            <int32_t name="unk_v4201_5" comment='v0.42.01'/>
+            <pointer name="unk_v4201_5" comment='v0.42.01 visited site related'>
+                <stl-vector name='visited' pointer-type='hf_visited_info'/>
+            </pointer>
         </pointer>
 
         <pointer name='curse' comment='v0.34.01'>
@@ -212,6 +214,23 @@
             </stl-vector>
             <stl-vector name='identities' type-name='int32_t' ref-target='cultural_identity'/>
         </pointer>
+    </struct-type>
+
+    <struct-type type-name='hf_visited_info'>
+        <int32_t name='site_id' comment='site that hf just left'/>
+        <int32_t name='location_id' comment='location that hf just left'/>
+        <int32_t name='x' comment='site.pos.x. probably next destination.'/>
+        <int32_t name='y' comment='site.pos.y. probably next destination.'/>
+        <int32_t name='year' comment='when left site'/>
+        <int32_t name='year_tick' comment='when left site'/>
+        <int32_t name='unk6'/>
+        <int32_t name='unk7'/>
+        <int32_t name='unk8'/>
+        <int32_t name='unk9'/>
+        <int32_t name='unk10'/>
+        <int32_t name='unk11'/>
+        <int32_t name='unk12'/>
+        <int32_t name='unk13'/>
     </struct-type>
 
     <enum-type type-name='histfig_flags'>

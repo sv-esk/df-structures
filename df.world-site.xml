@@ -70,7 +70,9 @@
         <stl-vector name='unk4' type-name='int32_t'/>
         <int32_t name='site_owner_id' ref-target='historical_entity'/>
         <int32_t name='unk_v42_1' comment='v0.42.01'/>
-        <int32_t name='unk_v42_2' comment='v0.42.01'/>
+        <pointer name='unk_v42_2' comment='v0.42.01 when visitor lefts site game pushes his hf.info.secret.unk_v4201_5 here'>
+            <stl-vector name='visited_info' pointer-type='hf_visited_info'/>
+        </pointer>
         <int32_t name='unk_v42_3' comment='v0.42.01'/>
         <int32_t name='site_id' ref-target='world_site'
                  comment='not initialized/saved/loaded, assumed member of base class'/>
