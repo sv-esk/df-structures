@@ -623,6 +623,7 @@
         <int32_t/>
         <int32_t/>
         <int32_t/>
+        <int32_t/>
     </class-type>
 
     <class-type type-name='activity_event_worshipst' inherits-from='activity_event'>
