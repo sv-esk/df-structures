@@ -639,6 +639,9 @@
         </stl-vector>
         <int32_t name='target_site_x' comment='target site world coordinate x'/>
         <int32_t name='target_site_y' comment='target site world coordinate y'/>
+
+        <int32_t/>
+        <int32_t/>
     </struct-type>
 </data-definition>
 
