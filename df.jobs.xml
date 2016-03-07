@@ -132,6 +132,10 @@
         <int32_t name='cur_path_index' comment='v0.34.08'/>
 
         <compound name='unk_v4020_2' type-name='coord' comment='v0.40.20'/>
+
+        <int32_t/>
+        <int32_t/>
+        <int32_t/>
     </struct-type>
 
     <struct-type type-name='job_item_ref'>
